@@ -56,6 +56,7 @@ Archivo **.CSS**
 Si bien esto pareciese ser la solución a todo no lo es pues no es recomendable hacer uso excesivo de la anidación y más por el contrario el uso excesivo de esto conllevaría a una lentitud al momento de cargar la pagina.
 
 La anidación no sólo es aplicable a etiquetas HTML si no también a  las propiedades.
+-------------------------------------------------------------------------------------------------------
 Ejemplo:
 
 Archivo **.SCSS**
@@ -79,4 +80,32 @@ Archivo **.CSS**
 	}
 
 Sencillo verdad?
+
+También se pueden hacer uso para las **Pseudo-clases**
+---------------------------------------------------------------------
+Ejemplo:
+
+Archivo **.SCSS**
+
+	a{
+		color:white;
+		&:hover{
+			color:#123456;
+		}
+		&:visited{
+			color:green;
+		}
+	}
+
+Archivo **.CSS**
+
+	a{
+		color:white;
+	}
+	a:hover{
+		color:#123456;
+	}
+	a:visited{
+		color:green;
+	}
 
