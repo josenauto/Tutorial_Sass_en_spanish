@@ -14,10 +14,15 @@ Después comprobamos si se instalo correctamente y escribimos:
 
 	sass -v
 
-A lo cual les saldra algo como `Sass 3.2.6 <Media Mark>` entonces tendremos lo necesario para comenzar con este tutorial.
+A lo cual les saldrá algo como `Sass 3.2.6 <Media Mark>` entonces tendremos lo necesario para comenzar con este tutorial.
 
 Crearemos un archivo llamado `estilos.scss`, abriremos la terminal o pronpt, nos colocamos dentro de la carpeta que contenga el archivo y escribimos:
 
 	sass –watch estilos.scss:estilos.css
 
-Esto creara automáticamente un archivo llamado `estilos.css`
+Esto creara automáticamente un archivo llamado `estilos.css` que nos servirá para verificar si la sintaxis que escribamos sean la correcta, ahora tenemos a Sass traduciendo nuestro codigo y no debemos de cerrar la terminal o pronpt, pues bien comencemos.
+
+Anidación
+=======
+
+
