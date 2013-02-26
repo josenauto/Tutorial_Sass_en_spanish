@@ -27,7 +27,7 @@ Anidación
 A muchos de los que escribimos **CSS** se nos es tedioso escribir siempre la etiqueta, identificador o clase antes de la etiqueta, por eso sass ofrece una forma más sencilla de hacerlo.
 Ejemplo:
 
-	**#menu{
+	#menu{
 		ul{
 			margin:0;
 			li{
@@ -37,4 +37,17 @@ Ejemplo:
 				}
 			}
 		}
-	}**
+	}
+
+El código de arriba en CSS sería:
+
+	#menu ul{
+		margin:0;
+	}
+	#menu ul li{
+		display:inline-block;
+	}
+	#menu ul li a{
+		color:white;
+	}
+
