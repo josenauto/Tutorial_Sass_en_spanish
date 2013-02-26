@@ -43,15 +43,9 @@ Archivo **.SCSS**
 
 Archivo **.CSS**
 
-	#menu ul{
-		margin:0;
-	}
-	#menu ul li{
-		display:inline-block;
-	}
-	#menu ul li a{
-		color:white;
-	}
+	#menu ul{	margin:0;	}
+	#menu ul li{	display:inline-block;	}
+	#menu ul li a{		color:white;	}
 
 Si bien esto pareciese ser la solución a todo no lo es pues no es recomendable hacer uso excesivo de la anidación y más por el contrario el uso excesivo de esto conllevaría a una lentitud al momento de cargar la pagina.
 
@@ -81,7 +75,7 @@ Archivo **.CSS**
 
 Sencillo verdad?
 
-También se pueden hacer uso para las **Pseudo-clases**
+También se pueden hacer uso para las Pseudo-clases
 ---------------------------------------------------------------------
 Ejemplo:
 
@@ -89,23 +83,13 @@ Archivo **.SCSS**
 
 	a{
 		color:white;
-		&:hover{
-			color:#123456;
-		}
-		&:visited{
-			color:green;
-		}
+		&:hover{	color:#123456;	}
+		&:visited{	color:green;	}
 	}
 
 Archivo **.CSS**
 
-	a{
-		color:white;
-	}
-	a:hover{
-		color:#123456;
-	}
-	a:visited{
-		color:green;
-	}
+	a{	color:white;	}
+	a:hover{	color:#123456;	}
+	a:visited{	color:green;	}
 
