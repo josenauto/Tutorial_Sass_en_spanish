@@ -53,4 +53,30 @@ Archivo **.CSS**
 		color:white;
 	}
 
-Si bien esto pareciese ser la solución a todo no lo es
+Si bien esto pareciese ser la solución a todo no lo es pues no es recomendable hacer uso excesivo de la anidación y más por el contrario el uso excesivo de esto conllevaría a una lentitud al momento de cargar la pagina.
+
+La anidación no sólo es aplicable a etiquetas HTML si no también a  las propiedades.
+Ejemplo:
+
+Archivo **.SCSS**
+
+	a{
+		color:white;
+		font:{
+			size:20px;
+			weight:bold;
+			style: uppercase;
+		}
+	}
+
+Archivo **.CSS**
+
+	a {
+		color: white;
+		font-size: 20px;
+		font-weight: bold;
+		font-style: uppercase; 
+	}
+
+Sencillo verdad?
+
