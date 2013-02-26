@@ -26,7 +26,9 @@ Anidación
 =======
 A muchos de los que escribimos **CSS** se nos es tedioso escribir siempre la etiqueta, identificador o clase antes de la etiqueta, por eso sass ofrece una forma más sencilla de hacerlo.
 Ejemplo:
+
 Archivo **.SCSS**
+
 	#menu{
 		ul{
 			margin:0;
