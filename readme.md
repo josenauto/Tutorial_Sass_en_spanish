@@ -1,6 +1,6 @@
 Manual de Sass en español
 =========================
-![Sass](https://docs.google.com/file/d/0B5LTv71prcVxSUdOWC0yd01zSkU/edit?usp=sharing)
+![Sass](http://juliopalro.tumblr.com/image/23982178904)
 Este manual esta hecho por [@juliopalro](https://twitter.com/juliopalro) y que se basa en el tutorial de [Tutorial de Sass](http://sass-lang.com/tutorial.html) y mi propia experiencia.
 Instalación
 ===========
