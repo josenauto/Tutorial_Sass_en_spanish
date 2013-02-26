@@ -24,5 +24,17 @@ Esto creara automáticamente un archivo llamado `estilos.css` que nos servirá p
 
 Anidación
 =======
+A muchos de los que escribimos **CSS** se nos es tedioso escribir siempre la etiqueta, identificador o clase antes de la etiqueta, por eso sass ofrece una forma más sencilla de hacerlo.
+Ejemplo:
 
-
+	#menu{
+		ul{
+			margin:0;
+			li{
+				display:inline-block;
+				a{
+					color:white;
+				}
+			}
+		}
+	}
