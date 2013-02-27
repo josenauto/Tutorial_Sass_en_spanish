@@ -5,7 +5,7 @@ Instalación
 -------------
 Para este paso necesitaremos de Ruby que podemos [Descargar](http://www.ruby-lang.org/es/downloads/) desde su pagina oficial. Una vez instalado procederemos a instalar la gema de Sass.
 Instalando Sass
-----------------
+-------------------
 Para instalar **Sass** abriremos el **Command Prompt** de Ruby (caso windows) o la terminal (caso Linux o OS), en algunos casos deberás de escribir antes `sudo` (en caso de OS o Linux):
 
 	gem install sass 
@@ -62,8 +62,7 @@ Archivo **.SCSS**
 		font:{
 			size:20px;
 			weight:bold;
-			style: uppercase;
-		}
+			style: uppercase;	}
 	}
 
 Archivo **.CSS**
@@ -72,8 +71,7 @@ Archivo **.CSS**
 		color: white;
 		font-size: 20px;
 		font-weight: bold;
-		font-style: uppercase; 
-	}
+		font-style: uppercase;	}
 
 Sencillo verdad?
 
@@ -109,15 +107,13 @@ Archivo **.SCSS**
 	$pixel:20px;
 	a{	
 		color:$azul;
-		font-size:$pixel;
-	}
+		font-size:$pixel;	}
 
 Archivo **.CSS**
 
 	a{
 		color:#123456;
-		font-size:20px;
-	}
+		font-size:20px;	}
 
 La declaración de la variable no sólo se puede hacer fuera si no también dentro de las declaraciones de las etiquetas, con la salvedad de que sólo podrán ser utilizadas dentro de ellas y en las etiquetas hijas, mas si estas variables son usadas fuera de estas se acabara teniendo un error y que el nombre de la variable tomara también el nombre de la propiedad.
 
@@ -127,9 +123,7 @@ Archivo **.SCSS**
 
 	p{
 		$pixel-font-size:20px;
-		a{
-			font-size:$pixel-font-size;
-		}
+		a{	font-size:$pixel-font-size;	}
 	}
 
 Archivo **.CSS**
@@ -151,19 +145,47 @@ Archivo **.SCSS**
 		ul{
 			background:green;
 			border:$border+5;
-			width:$largo/2;
-		}
+			width:$largo/2;  }
 	}
 
 Archivo **.CSS**
 
 	#menu{
 		background: #123456;
-		width: 1050px;
-	}
+		width: 1050px;  }
 	#menu ul{
 		background: green;
 		border: 7px;
-		width: 525px;
+		width: 525px;	}
+
+Mixins
+---------
+Los mixins son uno de las características más potentes de **Sass**, esto es muy parecido a las funciones o métodos.
+
+Ejemplo:
+
+Archivo **.SCSS**
+
+	@mixin borde{
+		border:2px solid #12345;
+		border-radius:15px;
+		-moz-border-radius: 15px;
+		-webkit-border-radius: 15px;
 	}
+	ul li{	@include borde;	}
+	h1{	@include border;	}
+
+Archivo **.CSS**
+
+	ul li {
+		border: 2px solid #123456;
+		border-radius: 15px;
+		-moz-border-radius: 15px;
+		-webkit-border-radius: 15px; }
+
+	h1 {
+		border: 2px solid #123456;
+		border-radius: 15px;
+		-moz-border-radius: 15px;
+		-webkit-border-radius: 15px; }
 
