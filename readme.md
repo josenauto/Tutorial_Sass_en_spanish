@@ -200,8 +200,8 @@ Archivo **.SCSS**
 	@mixin borde($radio:10px,$color:#123456){
 		border:2px solid $color;
 		border-radius:$radio;
-	-moz-border-radius: $radio;
-	-webkit-border-radius: $radio;}
+		-moz-border-radius: $radio;
+		-webkit-border-radius: $radio;}
 	ul li{	@include borde(15px,green);}
 	h1{	@include borde;}
 
@@ -218,4 +218,8 @@ Archivo **.CSS**
 		border-radius: 10px;
 		-moz-border-radius: 10px;
 		-webkit-border-radius: 10px; }
+
+Funciones
+-------------
+Las diferentes funciones que se puede utilizar en **Sass** están en la [documentación de Sass](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html) y las cuales tocaremos a detalle.
 
