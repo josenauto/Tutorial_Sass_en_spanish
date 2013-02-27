@@ -189,3 +189,33 @@ Archivo **.CSS**
 		-moz-border-radius: 15px;
 		-webkit-border-radius: 15px; }
 
+Integración de argumentos
+--------------------------------
+En muchas ocasiones necesitaremos de especificar los argumentos que se deberán de tener en cuenta, las cuales pueden ser obligatorias o llevar un valor por defecto.
+
+Ejemplo:
+
+Archivo **.SCSS**
+
+	@mixin borde($radio:10px,$color:#123456){
+		border:2px solid $color;
+		border-radius:$radio;
+	-moz-border-radius: $radio;
+	-webkit-border-radius: $radio;}
+	ul li{	@include borde(15px,green);}
+	h1{	@include borde;}
+
+Archivo **.CSS**
+
+	ul li {
+		border: 2px solid green;
+		border-radius: 15px;
+		-moz-border-radius: 15px;
+		-webkit-border-radius: 15px; }
+
+	h1 {
+		border: 2px solid #123456;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px; }
+
