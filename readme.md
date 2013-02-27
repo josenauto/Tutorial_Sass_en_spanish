@@ -2,10 +2,10 @@ Tutorial de Sass en español
 =========================
 Este Tutorial esta hecho por [@juliopalro](https://twitter.com/juliopalro) y que se basa en el tutorial de [Tutorial de Sass](http://sass-lang.com/tutorial.html) y mi propia experiencia.
 Instalación
-===========
+-------------
 Para este paso necesitaremos de Ruby que podemos [Descargar](http://www.ruby-lang.org/es/downloads/) desde su pagina oficial. Una vez instalado procederemos a instalar la gema de Sass.
 Instalando Sass
-------------------
+===========
 Para instalar **Sass** abriremos el **Command Prompt** de Ruby (caso windows) o la terminal (caso Linux o OS), en algunos casos deberás de escribir antes `sudo` (en caso de OS o Linux):
 
 	gem install sass 
@@ -23,8 +23,9 @@ Crearemos un archivo llamado `estilos.scss`, abriremos la terminal o pronpt, nos
 Esto creara automáticamente un archivo llamado `estilos.css` que nos servirá para verificar si la sintaxis que escribamos sean la correcta, ahora tenemos a Sass traduciendo nuestro codigo y no debemos de cerrar la terminal o pronpt, pues bien comencemos.
 
 Anidación
-=======
+-------------
 A muchos de los que escribimos **CSS** se nos es tedioso escribir siempre la etiqueta, identificador o clase antes de la etiqueta, por eso sass ofrece una forma más sencilla de hacerlo.
+
 Ejemplo:
 
 Archivo **.SCSS**
@@ -51,6 +52,7 @@ Si bien esto pareciese ser la solución a todo no lo es pues no es recomendable 
 
 La anidación no sólo es aplicable a etiquetas HTML si no también a  las propiedades.
 -------------------------------------------------------------------------------------------------------
+
 Ejemplo:
 
 Archivo **.SCSS**
@@ -77,6 +79,7 @@ Sencillo verdad?
 
 También se pueden hacer uso para las Pseudo-clases
 ---------------------------------------------------------------------
+
 Ejemplo:
 
 Archivo **.SCSS**
@@ -92,4 +95,75 @@ Archivo **.CSS**
 	a{	color:white;	}
 	a:hover{	color:#123456;	}
 	a:visited{	color:green;	}
+
+Variables
+------------
+
+En muchos casos el programador coloca ciertos parámetros dentro de los comentarios para así poder recordarlos y utilizarlos dentro del archivo **CSS** pero que mejor tenerlos como variables y poder utilizarlos en cualquier momento, por lo común suelen ser declaradas al inicio del archivo.
+
+Ejemplo:
+
+Archivo **.SCSS**
+
+	$azul:#123456;
+	$pixel:20px;
+	a{	
+		color:$azul;
+		font-size:$pixel;
+	}
+
+Archivo **.CSS**
+
+	a{
+		color:#123456;
+		font-size:20px;
+	}
+
+La declaración de la variable no sólo se puede hacer fuera si no también dentro de las declaraciones de las etiquetas, con la salvedad de que sólo podrán ser utilizadas dentro de ellas y en las etiquetas hijas, mas si estas variables son usadas fuera de estas se acabara teniendo un error y que el nombre de la variable tomara también el nombre de la propiedad.
+
+Ejemplo:
+
+Archivo **.SCSS**
+
+	p{
+		$pixel-font-size:20px;
+		a{
+			font-size:$pixel-font-size;
+		}
+	}
+
+Archivo **.CSS**
+
+	p{	font-size:20px;	}
+	a{	font-size:20px;	}
+
+Operaciones
+-----------------
+Las operaciones soportadas son suma, multiplicación y division.
+
+Archivo **.SCSS**
+
+	$largo:1050px;
+	$ancho:2px;
+	#menu{
+		background:#123456;
+		width:$largo;
+		ul{
+			background:green;
+			border:$border+5;
+			width:$largo/2;
+		}
+	}
+
+Archivo **.CSS**
+
+	#menu{
+		background: #123456;
+		width: 1050px;
+	}
+	#menu ul{
+		background: green;
+		border: 7px;
+		width: 525px;
+	}
 
