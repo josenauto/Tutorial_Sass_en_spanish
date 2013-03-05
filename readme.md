@@ -228,27 +228,37 @@ Función RGB
 
 **RGBA**: Opacidad de un color.
 
-	rgba($color,$opacidad);
-	//$color:#123456 o blue;
-	//$opacidad:un número entre 0 y 1;
-
+	$color:#123456;
+	$opacidad:0,5;//numero entre 0 y 1
+	rgba($color,$opacidad);//rgba(18,52,86,0,5);
+	
 **MIX**: Mezcla de un color.
 
-	mix($rojo,$azul,$peso);
-	//$rojo,$azul:#123456 o red;
-	//$porcentaje:número entre 0% y 100%;
+	$rojo:red;
+	$azul:#123456;
+	$peso:50%;//siempre en porcentaje
+	mix($rojo,$azul,$peso);//#881a2b;
 
 Función HSL
 ----------------
 
 **HSL**:Convierte tres colores en uno sólo.
 
-	hsl($matiz,$saturacion,$luz);
-	//$matiz: número entre 0  y 360;
-	//$saturacion: porcentaje entre 0% y 100%;
-	//$luz: luminosidad porcentaje entre 0% y 100%;
+	$matiz:200deg;//entre 0 y 360
+	$saturacion:75%;
+	$luz:50%;
+	hsl($matiz,$saturacion,$luz);//#209fdf
 
 **HSLA**: Esta función es una variación de **hsl** sólo que en esta se incluye la variable de opacidad.
 
-	hsla($matiz,$saturacion,$luz,$opacidad);
+	$matiz:200deg;
+	$saturacion:75%;
+	$luz:50%;
+	$opacidad:0.5;
+	hsla($matiz,$saturacion,$luz,$opacidad);//rgba(32,159,223,0.5);
 
+**ADJUST-HUE**: Cambia la tonalidad de un color, manteniendo la luminosidad y la saturación.
+
+	$color:#123456;
+	$grados:200deg;//entre -360deg y 360deg
+	adjust-hue($color,$grados);//564b12
