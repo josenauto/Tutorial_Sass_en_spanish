@@ -296,3 +296,8 @@ Función HSL
 
 	$color:#123456;
 	complement($color);//#563412
+
+**INVERT**: Devuelve el inverso de un color.
+
+	$color:#123456;
+	invert($color);//#edcba9
