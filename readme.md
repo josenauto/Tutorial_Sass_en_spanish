@@ -226,13 +226,13 @@ Las diferentes funciones que se puede utilizar en **Sass** están en la [documen
 Función RGB
 -------------------
 
-Opacidad de un color.
+**RGBA**: Opacidad de un color.
 
 	rgba($color,$opacidad);
 	//$color:#123456 o blue;
 	//$opacidad:un número entre 0 y 1;
 
-Mezcla de dos colores.
+**MIX**: Mezcla de un color.
 
 	mix($rojo,$azul,$peso);
 	//$rojo,$azul:#123456 o red;
@@ -240,14 +240,15 @@ Mezcla de dos colores.
 
 Función HSL
 ----------------
+
+**HSL**:Convierte tres colores en uno sólo.
+
 	hsl($matiz,$saturacion,$luz);
 	//$matiz: número entre 0  y 360;
 	//$saturacion: porcentaje entre 0% y 100%;
 	//$luz: luminosidad porcentaje entre 0% y 100%;
 
-Función HSLA
-------------------
-Esta función es una variación de **hsl** sólo que en esta se incluye la variable de opacidad.
+**HSLA**: Esta función es una variación de **hsl** sólo que en esta se incluye la variable de opacidad.
 
 	hsla($matiz,$saturacion,$luz,$opacidad);
 
