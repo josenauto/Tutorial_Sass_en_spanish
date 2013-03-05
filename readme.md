@@ -230,14 +230,14 @@ Función RGB
 
 	$color:#123456;
 	$opacidad:0,5;//numero entre 0 y 1
-	rgba($color,$opacidad);//rgba(18,52,86,0,5);
+	rgba($color,$opacidad);//rgba(18,52,86,0,5)
 	
 **MIX**: Mezcla de un color.
 
 	$rojo:red;
 	$azul:#123456;
 	$peso:50%;//siempre en porcentaje
-	mix($rojo,$azul,$peso);//#881a2b;
+	mix($rojo,$azul,$peso);//#881a2b
 
 Función HSL
 ----------------
@@ -255,10 +255,16 @@ Función HSL
 	$saturacion:75%;
 	$luz:50%;
 	$opacidad:0.5;
-	hsla($matiz,$saturacion,$luz,$opacidad);//rgba(32,159,223,0.5);
+	hsla($matiz,$saturacion,$luz,$opacidad);//rgba(32,159,223,0.5)
 
 **ADJUST-HUE**: Cambia la tonalidad de un color, manteniendo la luminosidad y la saturación.
 
 	$color:#123456;
 	$grados:200deg;//entre -360deg y 360deg
-	adjust-hue($color,$grados);//564b12
+	adjust-hue($color,$grados);//#564b12
+
+**LIGHTEN**: Hace un color mucho mas claro.
+
+	$color:#123456;
+	$luz:30%;
+	lighten($color,$luz);//#2e80d3
