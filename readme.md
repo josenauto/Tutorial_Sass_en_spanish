@@ -221,17 +221,33 @@ Archivo **.CSS**
 
 Funciones
 -------------
-Las diferentes funciones que se puede utilizar en **Sass** están en la [documentación de Sass](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html) y las cuales tocaremos a detalle.
+Las diferentes funciones que se puede utilizar en **Sass** están en la [documentación de Sass](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html) y las cuales tocaremos las más resaltantes a detalle.
 
-Funciones RGB
+Función RGB
 -------------------
 
 Opacidad de un color.
 
-	rgba($color,$num);
-	//$color:#123456 o blue;		$num:un número entre 0 y 1;
+	rgba($color,$opacidad);
+	//$color:#123456 o blue;
+	//$opacidad:un número entre 0 y 1;
 
 Mezcla de dos colores.
 
 	mix($rojo,$azul,$peso);
-	//$rojo,$azul:#123456 o red;		$peso:número entre 0% y 100%;
+	//$rojo,$azul:#123456 o red;
+	//$porcentaje:número entre 0% y 100%;
+
+Función HSL
+----------------
+	hsl($matiz,$saturacion,$luz);
+	//$matiz: número entre 0  y 360;
+	//$saturacion: porcentaje entre 0% y 100%;
+	//$luz: luminosidad porcentaje entre 0% y 100%;
+
+Función HSLA
+------------------
+Esta función es una variación de **hsl** sólo que en esta se incluye la variable de opacidad.
+
+	hsla($matiz,$saturacion,$luz,$opacidad);
+
