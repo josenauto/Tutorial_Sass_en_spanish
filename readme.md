@@ -274,3 +274,9 @@ Función HSL
 	$color:#123456;
 	$dark:10%;
 	darken($color,$dark);//#091a2c
+
+**SATURATE**: Hace un color más saturado.
+
+	$color:#123456;
+	$saturacion:60%;
+	saturate($color,$saturacion);//#003468
