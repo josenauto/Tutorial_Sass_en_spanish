@@ -291,3 +291,8 @@ Función HSL
 
 	$color:;
 	grayscale($color);//#343434
+
+**COMPLEMENT**: Devuelve el complemento de un color.
+
+	$color:#123456;
+	complement($color);//#563412
