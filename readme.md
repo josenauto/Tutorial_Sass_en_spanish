@@ -268,3 +268,9 @@ Función HSL
 	$color:#123456;
 	$luz:30%;
 	lighten($color,$luz);//#2e80d3
+
+**DARKEN**: Oscurece un color.
+
+	$color:#123456;
+	$dark:10%;
+	darken($color,$dark);//#091a2c
