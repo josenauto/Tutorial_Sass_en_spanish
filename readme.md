@@ -286,3 +286,8 @@ Función HSL
 	$color:#123456;
 	$desaturacion:60%;
 	desaturate($color,$desaturacion);//#313437
+
+**GRAYSCALE**: Convierte un color a escala de grises.
+
+	$color:;
+	grayscale($color);//#343434
