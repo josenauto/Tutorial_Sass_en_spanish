@@ -280,3 +280,9 @@ Función HSL
 	$color:#123456;
 	$saturacion:60%;
 	saturate($color,$saturacion);//#003468
+
+**DESATURETE**: Realisa lo iverso a **saturate** ose hace un color menos saturado.
+
+	$color:#123456;
+	$desaturacion:60%;
+	desaturate($color,$desaturacion);//#313437
