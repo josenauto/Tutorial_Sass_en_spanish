@@ -223,3 +223,15 @@ Funciones
 -------------
 Las diferentes funciones que se puede utilizar en **Sass** están en la [documentación de Sass](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html) y las cuales tocaremos a detalle.
 
+Funciones RGB
+-------------------
+
+Opacidad de un color.
+
+	rgba($color,$num);
+	//$color:#123456 o blue;		$num:un número entre 0 y 1;
+
+Mezcla de dos colores.
+
+	mix($rojo,$azul,$peso);
+	//$rojo,$azul:#123456 o red;		$peso:número entre 0% y 100%;
