@@ -344,17 +344,17 @@ Funciones con números
 	$num:2.3;
 	ceil($num);//3
 
-***FLOOR**: Redondea un número al entero inferior próximo.
+**FLOOR**: Redondea un número al entero inferior próximo.
 
 	$num:2.3;
 	floor($num);//2
 
-***ABS**: Devuelve el valor absoluto de un número.
+**ABS**: Devuelve el valor absoluto de un número.
 
 	$num:-2.5;
 	abs($num);//2.5
 
-***MIN**: Devuelve el menor número de varios.
+**MIN**: Devuelve el menor número de varios.
 
 	min(6,8,5,3,9,7)//3
 
