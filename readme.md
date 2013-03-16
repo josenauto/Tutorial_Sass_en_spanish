@@ -323,3 +323,41 @@ Funciones con cadenas
 
 	$font:”Arial”;
 	unquote($font)//Arial
+
+Funciones con números
+-----------------------------
+
+**PERCENTAGE**: Multiplica un número por 100% y lo vuelve en porcentaje.
+
+	$num:2.5;
+	percentage($num);//250%
+
+**ROUND**: Redondea un número al entero más cercano, en caso de el decimal este en 5 se optara por el entero superior.
+
+	$num1:2.4;
+	$num2:2.5;
+	percentage($num1);//2
+	percentage($num2);//3
+
+**CEIL**: Redondea un número al entero superior próximo.
+
+	$num:2.3;
+	ceil($num);//3
+
+***FLOOR**: Redondea un número al entero inferior próximo.
+
+	$num:2.3;
+	floor($num);//2
+
+***ABS**: Devuelve el valor absoluto de un número.
+
+	$num:-2.5;
+	abs($num);//2.5
+
+***MIN**: Devuelve el menor número de varios.
+
+	min(6,8,5,3,9,7)//3
+
+**MAX**: Devuelve el mayor número de varios.
+
+	max(6,8,5,3,9,7)//9
