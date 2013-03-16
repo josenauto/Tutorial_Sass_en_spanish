@@ -1,11 +1,16 @@
 Tutorial de Sass en español
 =========================
+
 Este Tutorial esta hecho por [@juliopalro](https://twitter.com/juliopalro) y que se basa en el tutorial de [Tutorial de Sass](http://sass-lang.com/tutorial.html) y mi propia experiencia.
+
 Instalación
 -------------
+
 Para este paso necesitaremos de Ruby que podemos [Descargar](http://www.ruby-lang.org/es/downloads/) desde su pagina oficial. Una vez instalado procederemos a instalar la gema de Sass.
+
 Instalando Sass
 -------------------
+
 Para instalar **Sass** abriremos el **Command Prompt** de Ruby (caso windows) o la terminal (caso Linux o OS), en algunos casos deberás de escribir antes `sudo` (en caso de OS o Linux):
 
 	gem install sass 
@@ -20,10 +25,11 @@ Crearemos un archivo llamado `estilos.scss`, abriremos la terminal o pronpt, nos
 
 	sass --watch estilos.scss:estilos.css
 
-Esto creara automáticamente un archivo llamado `estilos.css` que nos servirá para verificar si la sintaxis que escribamos sean la correcta, ahora tenemos a Sass traduciendo nuestro codigo y no debemos de cerrar la terminal o pronpt, pues bien comencemos.
+Esto creara automáticamente un archivo llamado `estilos.css` que nos servirá para verificar si la sintaxis que escribamos sean la correcta, ahora tenemos a Sass traduciendo nuestro código y no debemos de cerrar la terminal o pronpt, pues bien comencemos.
 
 Anidación
 -------------
+
 A muchos de los que escribimos **CSS** se nos es tedioso escribir siempre la etiqueta, identificador o clase antes de la etiqueta, por eso sass ofrece una forma más sencilla de hacerlo.
 
 Ejemplo:
@@ -133,7 +139,8 @@ Archivo **.CSS**
 
 Operaciones
 -----------------
-Las operaciones soportadas son suma, multiplicación y division.
+
+Las operaciones soportadas son suma, multiplicación y división.
 
 Archivo **.SCSS**
 
@@ -160,6 +167,7 @@ Archivo **.CSS**
 
 Mixins
 ---------
+
 Los mixins son uno de las características más potentes de **Sass**, esto es muy parecido a las funciones o métodos.
 
 Ejemplo:
@@ -191,6 +199,7 @@ Archivo **.CSS**
 
 Integración de argumentos
 --------------------------------
+
 En muchas ocasiones necesitaremos de especificar los argumentos que se deberán de tener en cuenta, las cuales pueden ser obligatorias o llevar un valor por defecto.
 
 Ejemplo:
@@ -281,7 +290,7 @@ Función HSL
 	$saturacion:60%;
 	saturate($color,$saturacion);//#003468
 
-**DESATURETE**: Realisa lo iverso a **saturate** ose hace un color menos saturado.
+**DESATURETE**: Realiza lo inverso a **saturate** ose hace un color menos saturado.
 
 	$color:#123456;
 	$desaturacion:60%;
@@ -301,3 +310,16 @@ Función HSL
 
 	$color:#123456;
 	invert($color);//#edcba9
+
+Funciones con cadenas
+-----------------------------
+
+**QUOTE**: Agrega comillas de una cadena.
+
+	$font:Arial;
+	quote($font)//”Arial”
+
+**UNQUOTE**: Elimina las comillas de una cadena.
+
+	$font:”Arial”;
+	unquote($font)//Arial
