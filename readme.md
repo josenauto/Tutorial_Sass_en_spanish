@@ -361,3 +361,37 @@ Funciones con números
 **MAX**: Devuelve el mayor número de varios.
 
 	max(6,8,5,3,9,7)//9
+
+Funciones con listas
+-------------------------
+
+Una lista puede ser declarada de dos formas:
+
+	$list:10px 15px 10px 15px;
+	$otro:(10px 15px 10px 15px);
+
+**LENGTH**: Devuelve la longitud o tamaño de una lista.
+
+	$list:10px 15px 10px 15px;
+	length($list);//4
+
+**NTH**: Devuelve un elemento específico de una lista.
+
+	$list:10px 15px 10px 15px;
+	nth($list,3);//10px
+
+**JOIN**: Fusiona o une dos listas en una nueva.
+
+	$mar1:10px 15px;
+	$mar2:15px 10px;
+	join($mar1,$mar2);//10px 15px 15px 10px
+
+**APPEND**:  Añade un valor o una lista a otra variable, separados por lo que queramos.
+
+	append($valor, $valor_a_agregar,$separador)
+
+	$list:10px, 15px;
+	$val:15px 10px;
+	append($list,$val,auto);//10px, 15px, 15px 10px
+	append($list,$val,space);//10px 15px 15px 10px
+	append($val,$list,comma);//10px, 15px, 15px, 10px
