@@ -395,3 +395,33 @@ Una lista puede ser declarada de dos formas:
 	append($list,$val,auto);//10px, 15px, 15px 10px
 	append($list,$val,space);//10px 15px 15px 10px
 	append($val,$list,comma);//10px, 15px, 15px, 10px
+
+Funciones de introspección:
+-----------------------------------
+
+**TYPE-OF**: Devuelve el tipo del valor a evaluar.
+
+	type-of(50px);//número
+	type-of(inline);//cadena
+	type-of(“none”);//cadena
+	type-of(true);//booleano
+	type-of(#123456);//color
+	type-of(blue);//color
+
+**UNIT**: Devuelve la unidad de medida.
+
+	unit(25);//  ”” Como no tiene unidades no muestra nada.
+	unit(25px);//  ”px”
+	unit(25em);//  ”em”
+	unit(25%);//  ”%”
+
+**UNITLESS**: Devuelve un booleano “true” o “false” que indicaran si tiene o no unidades.
+
+	unitless(25);// “true” no tiene unidades
+	unitless(25px);// “false” tiene unidades.
+
+**COMPARABLE**: Comprueba si dos valores son del mismo tipo(número, cadena) y si tiene la misma unidad de medida,  para poder realizar operaciones con estas.
+
+	comparable(5px, 25px);// “true”
+	comparable(5cm, 25mm);// ”true”
+	comparable(5px, 25em);// “false”
