@@ -1,16 +1,11 @@
 Tutorial de Sass en español
 =========================
-
 Este Tutorial esta hecho por [@juliopalro](https://twitter.com/juliopalro) y que se basa en el tutorial de [Tutorial de Sass](http://sass-lang.com/tutorial.html) y mi propia experiencia.
-
 Instalación
 -------------
-
 Para este paso necesitaremos de Ruby que podemos [Descargar](http://www.ruby-lang.org/es/downloads/) desde su pagina oficial. Una vez instalado procederemos a instalar la gema de Sass.
-
 Instalando Sass
 -------------------
-
 Para instalar **Sass** abriremos el **Command Prompt** de Ruby (caso windows) o la terminal (caso Linux o OS), en algunos casos deberás de escribir antes `sudo` (en caso de OS o Linux):
 
 	gem install sass 
@@ -29,7 +24,6 @@ Esto creara automáticamente un archivo llamado `estilos.css` que nos servirá p
 
 Anidación
 -------------
-
 A muchos de los que escribimos **CSS** se nos es tedioso escribir siempre la etiqueta, identificador o clase antes de la etiqueta, por eso sass ofrece una forma más sencilla de hacerlo.
 
 Ejemplo:
@@ -139,7 +133,6 @@ Archivo **.CSS**
 
 Operaciones
 -----------------
-
 Las operaciones soportadas son suma, multiplicación y división.
 
 Archivo **.SCSS**
@@ -165,9 +158,8 @@ Archivo **.CSS**
 		border: 7px;
 		width: 525px;	}
 
-Mixins
+Mixins (@mixin)
 ---------
-
 Los mixins son uno de las características más potentes de **Sass**, esto es muy parecido a las funciones o métodos.
 
 Ejemplo:
@@ -199,7 +191,6 @@ Archivo **.CSS**
 
 Integración de argumentos
 --------------------------------
-
 En muchas ocasiones necesitaremos de especificar los argumentos que se deberán de tener en cuenta, las cuales pueden ser obligatorias o llevar un valor por defecto.
 
 Ejemplo:
@@ -227,6 +218,23 @@ Archivo **.CSS**
 		border-radius: 10px;
 		-moz-border-radius: 10px;
 		-webkit-border-radius: 10px; }
+
+Selectores de herencia (@extend)
+-----------------------------------------
+
+Esto es equivalente a los selectores múltiples, ejemplo:
+
+Archivo **.SCSS**
+
+	h1{color:#123456;}
+	h2{
+		@extend h1;
+		background-color: red;}
+
+Archivo **.CSS**
+
+	h1,h2{color:#123456;}
+	h2{background-color: red;}
 
 Funciones
 -------------
@@ -344,17 +352,17 @@ Funciones con números
 	$num:2.3;
 	ceil($num);//3
 
-**FLOOR**: Redondea un número al entero inferior próximo.
+***FLOOR**: Redondea un número al entero inferior próximo.
 
 	$num:2.3;
 	floor($num);//2
 
-**ABS**: Devuelve el valor absoluto de un número.
+***ABS**: Devuelve el valor absoluto de un número.
 
 	$num:-2.5;
 	abs($num);//2.5
 
-**MIN**: Devuelve el menor número de varios.
+***MIN**: Devuelve el menor número de varios.
 
 	min(6,8,5,3,9,7)//3
 
@@ -425,3 +433,4 @@ Funciones de introspección:
 	comparable(5px, 25px);// “true”
 	comparable(5cm, 25mm);// ”true”
 	comparable(5px, 25em);// “false”
+
