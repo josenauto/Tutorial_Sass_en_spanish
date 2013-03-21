@@ -236,6 +236,60 @@ Archivo **.CSS**
 	h1,h2{color:#123456;}
 	h2{background-color: red;}
 
+Bucle Each (@each)
+--------------------------
+
+Este bucle pertenece a Ruby y es aplicado en SASS con un **@** al inicio y que sirve para hacer cosas recurrentes, por ejemplo:
+
+	Necesito poner un background a los links de facebook, youtube, gplus y twitter.
+
+Archivo **HTML**
+
+	<ul>
+		<li><a class="facebook" href="#"></a></li>
+		<li><a class="twitter" href="#"></a></li>
+		<li><a class="gplus" href="#"></a></li>
+		<li><a class="youtube" href="#"></a></li>
+	</ul>
+
+Como vemos los enlaces tienen cada uno una clase con el nombre de una red social y a las cuales les pondremos su respectivo fondo, no les pongo texto pues las imágenes de fondo serán suficientes para dar a conocer que tipo de red social es.
+
+Archivo **SCSS**, en esta ocasión también usaremos las listas.
+
+	$lista:twitter, facebook, youtube, gplus;
+	a{
+		text-decoration: none;
+		height: 49px;
+		width: 49px;
+		display: block;
+	}
+	li{
+		display: inline-block;
+	}
+	@each $item in $lista{
+		.#{$item}{background: url("imagenes/#{$item}.jpg") no-repeat;}
+	}
+
+Archivo **CSS**
+
+	a {
+		text-decoration: none;
+		height: 49px;
+		width: 49px;
+		display: block; }
+
+	li {display: inline-block; }
+
+	.twitter {background: url("imagenes/twitter.jpg") no-repeat; }
+
+	.facebook {background: url("imagenes/facebook.jpg") no-repeat; }
+
+	.youtube {background: url("imagenes/youtube.jpg") no-repeat; }
+
+	.gplus {background: url("imagenes/gplus.jpg") no-repeat; }
+
+Con esto tendremos los links con el fondo correspondiente.
+
 Funciones
 -------------
 Las diferentes funciones que se puede utilizar en **Sass** están en la [documentación de Sass](http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html) y las cuales tocaremos las más resaltantes a detalle.
@@ -246,7 +300,7 @@ Función RGB
 **RGBA**: Opacidad de un color.
 
 	$color:#123456;
-	$opacidad:0,5;//numero entre 0 y 1
+	$opacidad:0,5;//número entre 0 y 1
 	rgba($color,$opacidad);//rgba(18,52,86,0,5)
 	
 **MIX**: Mezcla de un color.
@@ -433,4 +487,3 @@ Funciones de introspección:
 	comparable(5px, 25px);// “true”
 	comparable(5cm, 25mm);// ”true”
 	comparable(5px, 25em);// “false”
-
