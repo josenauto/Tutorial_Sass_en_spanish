@@ -167,7 +167,7 @@ Ejemplo:
 Archivo **.SCSS**
 
 	@mixin borde{
-		border:2px solid #12345;
+		border:2px solid #123456;
 		border-radius:15px;
 		-moz-border-radius: 15px;
 		-webkit-border-radius: 15px;
